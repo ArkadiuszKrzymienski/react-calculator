@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(50, 50, 50);
+}
+
+.App{
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    min-height: 280px;
+    min-width: 280px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    font-family: sans-serif;
+    justify-content: space-between;
+    
+
+    .panel{
+        width: 100%;
+        text-align: right;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: 5px;
+        padding: 10px 20px;
+        background-color: rgb(150, 150, 150);
+        border: none;
+        p{  
+            font-size: 1em;
+
+            min-height: 25px;
+            &.result{
+                font-size: 1.7em;
+            }
+        }
+    }
+    .delete {
+        display: flex;
+        width: 100%;
+        button{
+            width: 33.33%;
+            padding: 10px;
+            margin: 5px;
+            background-color: rgb(70,70,70);
+            border: none;
+            color: white;
+
+            &:nth-child(1){
+                margin-left: 0;
+            }
+            &:nth-child(3){
+                margin-right: 0;
+            }
+        }
+    }
+    .numbers{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: calc(66.66% - 5px);
+        border: none;
+        button{
+            padding: 10px;
+            width: calc(33.33% - 10px);
+            margin: 5px;
+            background-color: rgb(30,30,30);
+            color: white;
+            border: none;
+
+            &:nth-child(3n-2){
+                margin-left: 0;
+            }
+
+            &:nth-child(3n){
+                margin-right: 0;
+            }
+
+            &:last-child{
+                background-color: rgb(120,255,120);
+                color: black;
+            }
+        }
+    }
+    .operation{
+        width: calc(33.33% - 5px);
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        button{
+            border: none;
+            margin: 5px;
+            width: calc(50% - 5px);
+            background-color: rgb(100,100,205);
+            color: white;
+            &:nth-child(2n-1){
+                margin-left: 0;
+            }
+            &:nth-child(2n){
+                margin-right: 0;
+            }
+        }
+    }
+}
