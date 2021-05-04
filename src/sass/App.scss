@@ -12,7 +12,7 @@ body{
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    width: 80%;
+    width: 40%;
     min-height: 280px;
     min-width: 280px;
     left: 50%;
@@ -45,18 +45,18 @@ body{
         display: flex;
         width: 100%;
         button{
-            width: 33.33%;
+            width: 100%;
             padding: 10px;
-            margin: 5px;
             background-color: rgb(70,70,70);
             border: none;
             color: white;
+            transition: .3s;
+            text-transform: uppercase;
+            margin-bottom: 2px;
 
-            &:nth-child(1){
-                margin-left: 0;
-            }
-            &:nth-child(3){
-                margin-right: 0;
+            &:hover{
+                background-color: rgb(200,70,70);
+                box-shadow:  0 0 5px black;
             }
         }
     }
@@ -68,11 +68,17 @@ body{
         border: none;
         button{
             padding: 10px;
-            width: calc(33.33% - 10px);
-            margin: 5px;
+            width: calc(33.33% - 4px);
+            margin: 2px;
             background-color: rgb(30,30,30);
             color: white;
             border: none;
+            transition: .3s;
+
+            &:hover{
+                background-color: rgb(70,70,70);
+                box-shadow:  0 0 2px black;
+            }
 
             &:nth-child(3n-2){
                 margin-left: 0;
@@ -85,20 +91,31 @@ body{
             &:last-child{
                 background-color: rgb(120,255,120);
                 color: black;
+
+                &:hover{
+                    background-color: rgb(70,255,70);
+                    box-shadow:  0 0 5px black;
+                }
             }
         }
     }
     .operation{
-        width: calc(33.33% - 5px);
+        width: calc(33.33% - 2px);
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         button{
             border: none;
-            margin: 5px;
-            width: calc(50% - 5px);
+            margin: 2px;
+            width: calc(50% - 2px);
             background-color: rgb(100,100,205);
             color: white;
+            
+            &:hover{
+                background-color: rgb(80,80,255);
+                box-shadow:  0 0 2px black;
+            }
+
             &:nth-child(2n-1){
                 margin-left: 0;
             }
